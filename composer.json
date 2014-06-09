@@ -1,6 +1,6 @@
 {
     "name": "dtisgodsson/twilio",
-    "description": "",
+    "description": "A Laravel 4 wrapper for the Twilio PHP SDK.",
     "keywords": ["twilio", "l4", "laravel", "laravel4", "sms"],
     "authors": [
         {
