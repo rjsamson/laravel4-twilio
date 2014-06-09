@@ -12,7 +12,7 @@ This package can be installed via Composer by adding the following to your compo
 	
 After installing via Composer, you will need to add the following lineto the `providers` array in your `app/config/app.php` file:
 
-  'Dtisgodsson\Twilio\TwilioServiceProvider'
+	'Dtisgodsson\Twilio\TwilioServiceProvider'
   
 # Configuration
   
