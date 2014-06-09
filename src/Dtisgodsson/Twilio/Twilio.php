@@ -42,11 +42,24 @@ class Twilio
 
         try
         {
-            $this->twilioClient->account->sms_messages->create(
-                $this->getFromNumber(),
-                $this->toNumber,
-                $message
-            );
+            $this->twilioClient->account->sms_messages->create($this->getFromNumber(), $this->toNumber, $message);
+        }
+        catch(Services_Twilio_RestException $exception)
+        {
+            throw new TwilioAPIException($exception->getStatus(), $exception->getMessage(), $exception->getCode(), $exception->getInfo());
+        }
+    }
+
+    public function call($url, $options=array())
+    {
+        if(!$this->toNumber)
+        {
+            throw new TwilioException("Please provide a number to call.");
+        }
+
+        try
+        {
+            return $this->twilioClient->account->calls->create($this->getFromNumber(), $this->toNumber, $url, $options);
         }
         catch(Services_Twilio_RestException $exception)
         {
