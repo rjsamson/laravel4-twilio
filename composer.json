@@ -1,6 +1,7 @@
 {
     "name": "dtisgodsson/twilio",
     "description": "",
+    "keywords": ["twilio", "l4", "laravel", "laravel4", "sms"],
     "authors": [
         {
             "name": "Darren Taylor",
