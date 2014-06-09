@@ -9,17 +9,17 @@ This package can be installed via Composer by adding the following to your compo
 	"require": {
 		"dtisgodsson/twilio": "dev-master"
 	}
-	
+
 After installing via Composer, you will need to add the following lineto the `providers` array in your `app/config/app.php` file:
 
 	'Dtisgodsson\Twilio\TwilioServiceProvider'
-  
+
 # Configuration
-  
+
 To configure, publish the packages configuration files using the following command from the root of your project:
 
 	php artisan config:publish dtisgodsson/twilio
-	
+
 You will now have the Twilio configuration file in your `app/config/packages/dtisgodsson/twilio` folder. This config file contains three options:
 
 * sid - obtained from Twilio
@@ -35,11 +35,17 @@ After installing and configuring this package, using it is easy!
 ### Simplest example
 
 	Twilio::to('232323')->message('Fancy a drink?')
-	
+
 ### Overriding the from number
 
 	Twilio::from('121212')->to('232323')->message('Hows it going?')
-	
+
+## Making Calls
+
+### Calling using TwiML from URL
+
+	Twilio::to('232323')->call('http://twimlets.com/holdmusic?Bucket=com.twilio.music.ambient')
+
 ## Exceptions
 
 The following exceptions may be thrown whilst using the package:
