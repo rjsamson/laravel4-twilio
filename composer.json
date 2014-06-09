@@ -1,0 +1,23 @@
+{
+    "name": "dtisgodsson/twilio",
+    "description": "",
+    "authors": [
+        {
+            "name": "Darren Taylor",
+            "email": "shout@darrenonthe.net"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0",
+        "illuminate/support": "4.1.*"
+    },
+    "autoload": {
+        "classmap": [
+            "src/migrations"
+        ],
+        "psr-0": {
+            "Dtisgodsson\\Twilio\\": "src/"
+        }
+    },
+    "minimum-stability": "stable"
+}
