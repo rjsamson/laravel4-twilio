@@ -3,7 +3,7 @@ Twilio SDK Wrapper for Laravel 4
 
 # Resources
 
-Tutorial - [Sending text messages and making calls using Twilio and Laravel 4](http://codegains.com/2014/06/laravel-4-twilio-tutorial-sending-sms-text-messages-php/)
+* **Tutorial** - [Sending text messages and making calls using Twilio and Laravel 4](http://codegains.com/2014/06/laravel-4-twilio-tutorial-sending-sms-text-messages-php/)
 
 
 # Installation
