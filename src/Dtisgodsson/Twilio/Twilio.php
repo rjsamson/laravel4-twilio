@@ -33,7 +33,7 @@ class Twilio
         return $this;
     }
 
-    public function message($message)
+    public function message($message, $params = [])
     {
         if(!$this->toNumber)
         {
@@ -42,7 +42,7 @@ class Twilio
 
         try
         {
-            $this->twilioClient->account->sms_messages->create($this->getFromNumber(), $this->toNumber, $message);
+            $this->twilioClient->account->sms_messages->create($this->getFromNumber(), $this->toNumber, $message, $params);
         }
         catch(Services_Twilio_RestException $exception)
         {
